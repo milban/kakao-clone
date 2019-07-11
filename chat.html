@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://kit.fontawesome.com/4324499101.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Chat | KaKao Clone</title>
 </head>
 
@@ -23,12 +24,12 @@
         </div>
     </div>
     <header class="header">
-        <div class="header__header-column"></div>
+        <span class="header__header-column">
         <a href="./index.html" class="header__back-btn">
-            <i class="fas fa-arrow-left fa-2x"></i>
+            <i class="fas fa-arrow-left"></i>
         </a>
         <h1 class="header__title">Best Friend</h1>
-        </div>
+        </span>
         <div class="header__header-column">
             <span class="header__icon">
                 <i class="fas fa-search"></i>
@@ -41,8 +42,8 @@
     <main class="chat">
         <ul class="chat__messages">
             <span class="chat__timestamp">Friday, January 11, 2019</span>
-            <li class="incoming-message message">
-                <img src="./images/avartar.png" class="g-avartar message__avartar">
+            <li class="incoming-message message friend">
+                <img src="./images/avartar.jpg" class="friend__avartar message__avartar">
                 <div class="message__content">
                     <span class="message__author">Best Friend</span>
                     <span class="message__bubble">Congrates I love you!</span>
