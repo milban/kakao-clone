@@ -3,6 +3,7 @@
   top: 0px;
   background-color: white;
   padding: 10px 0px;
+  z-index: 9;
 }
 
 .chats-body {
@@ -120,14 +121,38 @@
   background-image: linear-gradient(to left, #005555, #2948ff);
 }
 
+@keyframes incoming-msg-anim {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(none);
+  }
+}
+
 .incoming-message {
   align-self: flex-start;
   justify-content: flex-start;
+  animation: incoming-msg-anim 0.5s ease-out forwards;
+}
+
+@keyframes sent-msg-anim {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(none);
+  }
 }
 
 .sent-message {
   align-self: flex-end;
   justify-content: flex-end;
+  animation: sent-msg-anim 0.5s ease-out forwards;
 }
 
 .incoming-message .message__author {
@@ -139,4 +164,17 @@
 .message .message_timestamp {
   align-self: flex-end;
   margin-right: 10px;
+}
+
+@keyframes enlargeMsgAvartar {
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(3) translateX(50%);
+  }
+}
+
+.chat .message__avartar:hover {
+  animation: enlargeMsgAvartar 0.5s ease-in-out forwards;
 }

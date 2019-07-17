@@ -10,8 +10,15 @@
 @import "settings.css";
 @import "chat.css";
 
+html {
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+}
+
 * {
   box-sizing: border-box;
+  max-width: 550px;
 }
 
 body {
@@ -25,4 +32,19 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(none);
+  }
+}
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
 }
